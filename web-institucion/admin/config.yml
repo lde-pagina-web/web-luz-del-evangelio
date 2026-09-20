@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+locale: 'es'
+
+collections:
+  # ===== CRONOGRAMA =====
+  - name: "cronograma"
+    label: "📅 Cronograma Semanal"
+    files:
+      - name: "cronograma"
+        label: "Cronograma de la semana"
+        file: "content/cronograma.md"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string", default: "Cronograma Semanal" }
+          - { label: "Semana (ej: Semana del 22 al 26 de Septiembre)", name: "semana", widget: "string" }
+          - { label: "Imagen del cronograma", name: "imagen", widget: "image" }
+
+  # ===== MENÚ DEL BAR =====
+  - name: "menu"
+    label: "🍽️ Menú del Bar"
+    files:
+      - name: "menu"
+        label: "Menú de la semana"
+        file: "content/menu.md"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string", default: "Menú del Bar" }
+          - { label: "Semana (ej: Semana del 22 al 26 de Septiembre)", name: "semana", widget: "string" }
+          - { label: "Imagen del menú", name: "imagen", widget: "image" }
+
+  # ===== COMUNICADOS =====
+  - name: "comunicados"
+    label: "📢 Comunicados"
+    files:
+      - name: "comunicados"
+        label: "Comunicado actual"
+        file: "content/comunicados.md"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string", default: "Comunicados" }
+          - { label: "Fecha (ej: 15 de Septiembre de 2026)", name: "fecha", widget: "string" }
+          - { label: "Imagen del comunicado", name: "imagen", widget: "image" }
