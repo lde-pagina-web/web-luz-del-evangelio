@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Unidad Educativa Luz del Evangelio</title>
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,35 +28,54 @@
     </nav>
 
     <main>
+        <div class="carrusel">
+            <div class="carrusel-slides" id="carruselSlides"></div>
+            <button class="carrusel-btn prev" onclick="moverCarrusel(-1)">‹</button>
+            <button class="carrusel-btn next" onclick="moverCarrusel(1)">›</button>
+            <div class="carrusel-puntos" id="carruselPuntos"></div>
+        </div>
+
         <section>
-            <h2>Historia y Reseña</h2>
-            <p>
-                La Unidad Educativa Particular "Luz del Evangelio" fue fundada en 1995
-                con la misión de brindar una educación integral basada en valores
-                cristianos y académicos de excelencia.
-            </p>
-            <p>
-                Reemplaza este texto con la historia completa del colegio: año de
-                fundación, fundadores, crecimiento, logros y reconocimientos.
-            </p>
+            <h2 id="historiaTitulo">Historia y Reseña</h2>
+            <p id="historia">Cargando...</p>
         </section>
 
         <section>
-            <h2>Objetivo de la Institución</h2>
-            <p>
-                Formar estudiantes íntegros con valores sólidos, capaces de contribuir
-                positivamente a la sociedad mediante una educación de calidad,
-                promoviendo el desarrollo académico, humano y espiritual.
-            </p>
-            <p>
-                (Reemplaza con el objetivo o misión institucional real).
-            </p>
+            <h2 id="objetivoTitulo">Objetivo de la Institución</h2>
+            <p id="objetivo">Cargando...</p>
+        </section>
+
+        <section id="seccionVideo">
+            <h2 id="videoTitulo">Video Institucional</h2>
+            <div id="videoContenedor" class="video-contenedor"></div>
+        </section>
+
+        <section>
+            <h2>Últimas Noticias</h2>
+            <div class="noticias-grid" id="noticiasGrid"></div>
         </section>
     </main>
 
+    <!-- MODAL DE NOTICIAS -->
+    <div id="modalNoticia" class="modal-noticia" onclick="cerrarNoticia()">
+        <div class="modal-contenido" onclick="event.stopPropagation()">
+            <button class="modal-cerrar" onclick="cerrarNoticia()">×</button>
+            <img id="modalImg" src="" alt="Noticia">
+            <div class="modal-info">
+                <span id="modalFecha" class="modal-fecha"></span>
+                <h3 id="modalTitulo"></h3>
+                <p id="modalDescripcion"></p>
+            </div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; 2026 Unidad Educativa Particular "Luz del Evangelio" - Todos los derechos reservados</p>
+        <p><strong>Unidad Educativa Particular "Luz del Evangelio"</strong></p>
+        <p>Loja y Minnesota Esq. · Dirección Distrital 23D03</p>
+        <p>Teléfono: 098 555 8911 · Código AMIE: 08H01129</p>
+        <p style="margin-top: 15px;">&copy; 2026 Todos los derechos reservados</p>
     </footer>
 
+    <script src="js/inicio.js"></script>
 </body>
 </html>

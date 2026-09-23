@@ -8,6 +8,60 @@ public_folder: "/img/uploads"
 locale: 'es'
 
 collections:
+  # ===== PÁGINA DE INICIO =====
+  - name: "inicio"
+    label: "🏠 Página de Inicio"
+    files:
+      - name: "inicio"
+        label: "Contenido del inicio"
+        file: "content/inicio.md"
+        fields:
+          - { label: "Título de la página", name: "titulo", widget: "string", default: "Inicio" }
+          
+          - label: "🎥 Video Institucional"
+            name: "video_seccion"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Título de la sección", name: "titulo_video", widget: "string", default: "Video Institucional", required: false }
+              - { label: "Video (archivo MP4)", name: "video", widget: "file", required: false, hint: "Sube un video corto en formato MP4" }
+          
+          - label: "🖼️ Carrusel"
+            name: "carrusel"
+            widget: "list"
+            summary: "{{fields.titulo}}"
+            fields:
+              - { label: "Imagen", name: "imagen", widget: "image" }
+              - { label: "Título (opcional)", name: "titulo", widget: "string", required: false }
+          
+          - { label: "📖 Título de Historia", name: "historia_titulo", widget: "string", default: "Historia y Reseña" }
+          - { label: "📖 Historia y Reseña", name: "historia", widget: "text" }
+          
+          - { label: "🎯 Título del Objetivo", name: "objetivo_titulo", widget: "string", default: "Objetivo de la Institución" }
+          - { label: "🎯 Objetivo de la Institución", name: "objetivo", widget: "text" }
+          
+          - label: "📰 Noticias"
+            name: "noticias"
+            widget: "list"
+            summary: "{{fields.titulo}} - {{fields.fecha}}"
+            fields:
+              - { label: "Título", name: "titulo", widget: "string" }
+              - { label: "Fecha", name: "fecha", widget: "string", hint: "Ej: 15 Septiembre 2026" }
+              - { label: "Imagen", name: "imagen", widget: "image" }
+              - { label: "Descripción corta", name: "descripcion", widget: "text" }
+
+  # ===== NORMAS =====
+  - name: "normas"
+    label: "📋 Normas"
+    files:
+      - name: "normas"
+        label: "Normas de la institución"
+        file: "content/normas.md"
+        fields:
+          - { label: "Título", name: "titulo", widget: "string", default: "Normas de la Institución" }
+          - { label: "Imagen de normas (infografía)", name: "imagen", widget: "image" }
+          - { label: "Texto adicional debajo de la imagen", name: "texto_adicional", widget: "text", required: false }
+
   # ===== CRONOGRAMA =====
   - name: "cronograma"
     label: "📅 Cronograma Semanal"
