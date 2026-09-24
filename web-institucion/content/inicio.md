@@ -1,8 +1,9 @@
 ---
 titulo: Inicio
 
-video: /img/uploads/video-presentacion.mp4
-video_titulo: Video Institucional
+video_seccion:
+  titulo_video: Video Institucional
+  video: /img/uploads/video-presentacion.mp4
 
 carrusel:
   - imagen: /img/uploads/carrusel1.jpg
