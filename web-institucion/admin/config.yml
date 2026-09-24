@@ -18,13 +18,8 @@ collections:
         fields:
           - { label: "Título de la página", name: "titulo", widget: "string", default: "Inicio" }
           
-          - label: "🎥 Video Institucional"
-            name: "video_seccion"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Título de la sección", name: "titulo_video", widget: "string", default: "Video Institucional", required: false }
-              - { label: "Video (archivo MP4)", name: "video", widget: "file", required: false, hint: "Sube un video corto en formato MP4" }
+          - { label: "🎥 Título del Video", name: "video_titulo", widget: "string", default: "Video Institucional", required: false }
+          - { label: "🎥 Video (archivo MP4)", name: "video", widget: "file", required: false }
           
           - label: "🖼️ Carrusel"
             name: "carrusel"
@@ -43,7 +38,7 @@ collections:
           - label: "📰 Noticias"
             name: "noticias"
             widget: "list"
-            summary: "{{fields.titulo}} - {{fields.fecha}}"
+            summary: "{{fields.titulo}}"
             fields:
               - { label: "Título", name: "titulo", widget: "string" }
               - { label: "Fecha", name: "fecha", widget: "string", hint: "Ej: 15 Septiembre 2026" }
