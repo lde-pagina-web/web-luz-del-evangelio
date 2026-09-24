@@ -97,3 +97,28 @@ collections:
           - { label: "Título", name: "titulo", widget: "string", default: "Comunicados" }
           - { label: "Fecha (ej: 15 de Septiembre de 2026)", name: "fecha", widget: "string" }
           - { label: "Imagen del comunicado", name: "imagen", widget: "image" }
+
+  # ===== UNIFORMES Y HORARIOS =====
+  - name: "uniformes"
+    label: "👕 Uniformes y Horarios"
+    files:
+      - name: "uniformes"
+        label: "Uniformes y horarios"
+        file: "content/uniformes.md"
+        fields:
+          - { label: "Título de la página", name: "titulo", widget: "string", default: "Uniformes de los Estudiantes" }
+          
+          - label: "👕 Uniformes"
+            name: "uniformes"
+            widget: "list"
+            summary: "{{fields.nombre}}"
+            fields:
+              - { label: "Nombre del uniforme", name: "nombre", widget: "string" }
+              - { label: "Imagen", name: "imagen", widget: "image" }
+          
+          - { label: "Título de Horarios", name: "horarios_titulo", widget: "string", default: "Horarios de Ingreso y Salida" }
+          - { label: "Título del Ingreso", name: "hora_ingreso_titulo", widget: "string", default: "Ingreso" }
+          - { label: "Hora de ingreso", name: "hora_ingreso", widget: "string", hint: "Ej: 7:30 a.m." }
+          - { label: "Título de la Salida", name: "hora_salida_titulo", widget: "string", default: "Salida" }
+          - { label: "Hora de salida", name: "hora_salida", widget: "string", hint: "Ej: 1:00 p.m." }
+          - { label: "Nota adicional (opcional)", name: "nota_adicional", widget: "string", required: false, hint: "Ej: La institución no cuenta con jornada vespertina." }
