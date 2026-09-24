@@ -43,7 +43,7 @@ h2::after {
 
 h3 {
     font-size: 1.3rem;
-    color: #1a3a5c;
+    color: #010c16;
     margin-bottom: 10px;
 }
 
@@ -94,7 +94,7 @@ header h1 {
 
 /* ===== NAVEGACIÓN ===== */
 nav {
-    background-color: #1a3a5c;
+    background-color: #031120;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -334,7 +334,7 @@ section {
 }
 
 .noticia-card .leer-mas {
-    color: #1a3a5c;
+    color: #030f1c;
     font-weight: 600;
     margin-top: 15px;
     display: inline-flex;
@@ -393,7 +393,7 @@ section {
 }
 
 .horarios .card {
-    background: linear-gradient(135deg, #1a3a5c, #0f2438);
+    background: linear-gradient(135deg, #03111f, #041322);
     color: white;
     padding: 30px;
     border-radius: 12px;
@@ -450,14 +450,14 @@ section {
 .semana-texto {
     text-align: center;
     font-size: 1.1rem;
-    color: #1a3a5c;
+    color: #04101e;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: linear-gradient(135deg, #1a3a5c, #0f2438);
+    background: linear-gradient(135deg, #041120, #05121e);
     color: white;
     text-align: center;
     padding: 40px 20px;
