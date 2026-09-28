@@ -1,12 +1,12 @@
 ---
 titulo: Uniformes de los Estudiantes
 uniformes:
-  - nombre: Uniforme de Gala
-    imagen: /img/uploads/uniforme-gala.jpg
-  - nombre: Uniforme Diario
-    imagen: /img/uploads/uniforme-diario.jpg
   - nombre: Uniforme de Educación Física
     imagen: /img/uploads/uniforme-educacion-fisica.jpg
+  - nombre: Uniforme Diario
+    imagen: /img/uploads/uniforme-diario.jpg
+  - nombre: Uniforme de Gala
+    imagen: /img/uploads/uniforme-gala.jpg
 horarios_titulo: Horarios de Ingreso y Salida
 hora_ingreso_titulo: Ingreso
 hora_ingreso: 7:30 a.m.
